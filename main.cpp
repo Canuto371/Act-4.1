@@ -3,6 +3,16 @@
 #include <limits>
 using namespace std;
 
+// Act 4.1 - Grafo: sus representaciones y sus recorridos
+// Elizabeth Jauregui Zarate (A01253381)
+
+/*  
+El presente programa implementa una clase Grafo que permite manejar un grafo no dirigido.
+Solicita al usuario ingresar los arcos del grafo, que son pares de vértices conectados (u, v).
+Los arcos se almacenan en dos estructuras de datos: una matriz de adyacencia y una lista de adyacencia.
+Realiza un recorrido en profundidad (DFS) y un recorrido de anchura (BFS) a partir de un nodo inicial ingresado por el usuario.
+*/  
+
 int main() {
 
     int n, m;
@@ -55,7 +65,7 @@ int main() {
 
     int nodoInicialBFS;
     cout << "Ingrese el nodo inicial para BFS (0 a " << n - 1 << "): ";
-    
+
     while (!(cin >> nodoInicialBFS) || nodoInicialBFS < 0 || nodoInicialBFS >= n) {
         cout << "Error: El nodo inicial debe ser un número entero en el rango de 0 a " << n - 1 << ". Inténtelo de nuevo: ";
         cin.clear(); // Limpiar el estado de error de cin
