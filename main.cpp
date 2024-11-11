@@ -43,25 +43,26 @@ int main() {
 
     // DFS
     int nodoInicialDFS;
-cout << "Ingrese el nodo inicial para DFS (0 a " << n - 1 << "): ";
-while (!(cin >> nodoInicialDFS) || nodoInicialDFS < 0 || nodoInicialDFS >= n) {
-    cout << "Error: El nodo inicial debe ser un número entero en el rango de 0 a " << n - 1 << ". Inténtelo de nuevo: ";
-    cin.clear(); // Limpiar el estado de error de cin
-    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignorar la entrada inválida
-}
-// Ejecutar DFS solo si el nodo inicial es válido
-grafo.DFS(matrizAdyacencia, nodoInicialDFS);
+    cout << "Ingrese el nodo inicial para DFS (0 a " << n - 1 << "): ";
 
-int nodoInicialBFS;
-cout << "Ingrese el nodo inicial para BFS (0 a " << n - 1 << "): ";
-while (!(cin >> nodoInicialBFS) || nodoInicialBFS < 0 || nodoInicialBFS >= n) {
-    cout << "Error: El nodo inicial debe ser un número entero en el rango de 0 a " << n - 1 << ". Inténtelo de nuevo: ";
-    cin.clear(); // Limpiar el estado de error de cin
-    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignorar la entrada inválida
-}
-// Ejecutar BFS solo si el nodo inicial es válido
-grafo.BFS(listaAdyacencia, nodoInicialBFS);
+    while (!(cin >> nodoInicialDFS) || nodoInicialDFS < 0 || nodoInicialDFS >= n) {
+        cout << "Error: El nodo inicial debe ser un número entero en el rango de 0 a " << n - 1 << ". Inténtelo de nuevo: ";
+        cin.clear(); // Limpiar el estado de error de cin
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignorar la entrada inválida
+    }
+    // Ejecutar DFS solo si el nodo inicial es válido
+    grafo.DFS(matrizAdyacencia, nodoInicialDFS);
 
+    int nodoInicialBFS;
+    cout << "Ingrese el nodo inicial para BFS (0 a " << n - 1 << "): ";
     
+    while (!(cin >> nodoInicialBFS) || nodoInicialBFS < 0 || nodoInicialBFS >= n) {
+        cout << "Error: El nodo inicial debe ser un número entero en el rango de 0 a " << n - 1 << ". Inténtelo de nuevo: ";
+        cin.clear(); // Limpiar el estado de error de cin
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignorar la entrada inválida
+    }
+    // Ejecutar BFS solo si el nodo inicial es válido
+    grafo.BFS(listaAdyacencia, nodoInicialBFS);
+
     return 0;
 }
